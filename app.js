@@ -104,7 +104,7 @@ filename.forEach(function(item){
     var match = regexp.exec(str);
   
     if (match !== null) {
-      var robj = {ip: match[1], time: match[2], method: match[3], path: match[4], result: match[5], size: match[6]};
+      var robj = {ip: match[1], time: match[2], method: match[3], path: match[4], result: match[5], size: match[6], source: item};
   
       // Test for matching a GET parameter for DNS faking
       var matchdns = regexpdns.exec(robj.path);
